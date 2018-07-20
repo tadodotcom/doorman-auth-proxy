@@ -3,7 +3,6 @@
 # https://registry.hub.docker.com/_/node/
 #
 FROM node:4
-MAINTAINER Inaki Anduaga <inaki@inakianduaga.com>
 
 #
 # Install supervisor
@@ -16,7 +15,7 @@ RUN apt-get update && apt-get upgrade -y && \
 # Clone doorman repo and initialize npm packages
 #
 RUN apt-get -y --no-install-recommends install git  && \
-    git clone --single-branch --branch master https://github.com/movableink/doorman.git && \
+    git clone --single-branch --branch master https://github.com/tadodotcom/doorman.git && \
     cd /doorman && \
     npm install
 
